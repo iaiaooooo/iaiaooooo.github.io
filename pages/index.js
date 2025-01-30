@@ -55,9 +55,6 @@ export default function Home() {
         <title>{data.name}</title>
       </Head>
 
-      <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
-
       <div className="container mx-auto mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
