@@ -1,139 +1,107 @@
-import { useRef } from "react";
-import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
+import { useRef, useEffect, useState } from 'react';
+import Header from '../components/Header';
+import { useRouter } from 'next/router';
+import IconShape from '../components/IconShape';
+import WorkCard from '../components/WorkCard';
+import Footer from '../components/Footer';
+import Head from 'next/head';
+import Button from '../components/Button';
+import Link from 'next/link';
 
 // Local Data
-import data from "../data/portfolio.json";
+import data from '../data/portfolio.json';
 
 export default function Home() {
   // Ref
   const workRef = useRef();
-  const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
+  const workTitle = useRef();
+
+  const router = useRouter();
+  const [scroll, setScroll] = useState(0);
 
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
-      top: workRef.current.offsetTop,
+      top: workRef.current.offsetTop - 120,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
-  const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      workTitle.current.style.opacity = 1;
+    } else {
+      workTitle.current.style.opacity = 0;
+    }
+
+    if (window.scrollY > scroll + 250 || window.scrollY < scroll - 250) {
+      window.removeEventListener('scroll', handleScroll);
+      setScroll(window.scrollY);
+    }
   };
 
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-  }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  useEffect(() => {
+    const anchor = router.asPath.split('#')[1];
+    if (anchor == 'work') {
+      setTimeout(handleWorkScroll, 0);
+    }
+  }, [router.asPath]);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      {data.showCursor && <Cursor />}
+    <div className="global-background">
       <Head>
         <title>{data.name}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className="container mx-auto mb-10">
-        <Header
-          handleWorkScroll={handleWorkScroll}
-          handleAboutScroll={handleAboutScroll}
-        />
-        <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
-            >
-              {data.headerTaglineOne}
-            </h1>
-            <h1
-              ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineTwo}
-            </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
-          </div>
-
-          <Socials className="mt-2 laptop:mt-5" />
+      <Header handleWorkScroll={handleWorkScroll} />
+      <div className="h-svh flex flex-col justify-center justify-items-center -mt-20 pt-20 text-colored bg-accent dark:bg-accent-dark">
+        <div className="font-grotezk text-8xl md:text-[15rem] leading-none h-auto text-center">Hello!</div>
+        <div className="text-[3rem] text-center">{data.headerTaglineOne}</div>
+        <div className="text-2xl md:text-[3rem] font-grotezk-brukt text-center">{data.headerTaglineTwo}</div>
+        <div className="mt-40 md:mt-20 flex flex-row mx-auto justify-center">
+          <IconShape
+            className="h-20 w-20 md:h-30 md:w-30  fill-accent-dark dark:fill-accent motion-safe:animate-bounce"
+            onClick={() => handleWorkScroll()}
+          />
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
-
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.projects.map((project) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </div>
-        {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
-            </Link>
-          </div>
-        )}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-        </div>
-        <Footer />
       </div>
+      <div className="section-with-title" ref={workRef} id="work">
+        <div ref={workTitle} className="section-title text-colored  transition-all ease-in-out duration-300 opacity-0">
+          Work
+        </div>
+
+        <div className="content-container grid grid-cols-1 md:grid-cols-2 gap-8">
+          {data.projects.map((project) => (
+            <WorkCard
+              key={project.id}
+              img={project.imageSrc}
+              name={project.title}
+              description={project.description}
+              onClick={() => (project.url.indexOf('http') == 0 ? window.open(project.url) : router.push(project.url))}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* This button should not go into production */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-5 right-5">
+          <Link href="/edit">
+            <Button type="primary">Edit Data</Button>
+          </Link>
+        </div>
+      )}
+
+      <Footer />
     </div>
   );
 }

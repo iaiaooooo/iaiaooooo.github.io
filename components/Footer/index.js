@@ -1,34 +1,27 @@
-import React from "react";
-import Socials from "../Socials";
-import Link from "next/link";
-import Button from "../Button";
+import React from 'react';
+
+import Socials from '../Socials';
+import data from '../../data/portfolio.json';
+import classNames from 'classnames';
 
 const Footer = ({}) => {
   return (
     <>
-      <div className="mt-5 laptop:mt-40 p-2 laptop:p-0">
-        <div>
-          <h1 className="text-2xl text-bold">Contact.</h1>
-          <div className="mt-10">
-            <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
+      <div className="p-7 text-colored bg-accent  dark:bg-accent-dark">
+        <div className="mt-5 md:mt-10 flex flex-col sm:flex-row justify-between content-end">
+          <div>
+            <h1 className="font-grotezk text-3xl md:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
               LET&apos;S WORK
             </h1>
-            <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              TOGETHER
+            <h1 className="font-grotezk text-3xl md:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
+              TOGETHER :)
             </h1>
-            <Button type="primary">Schedule a call</Button>
-            <div className="mt-10">
-              <Socials />
-            </div>
+          </div>
+          <div className="h-fit mt-5 md:mt-auto mb-0 text-black dark:text-white justify-self-end text-end">
+            <Socials iconClass="w-10 h-10 mx-1 text-colored motion-safe:hover:-mt-2" />
           </div>
         </div>
       </div>
-      <h1 className="text-sm text-bold mt-2 laptop:mt-10 p-2 laptop:p-0">
-        Made With ❤ by{" "}
-        <Link href="http://www.chetanverma.com">
-          <a className="underline underline-offset-1">Chetan Verma</a>
-        </Link>
-      </h1>
     </>
   );
 };

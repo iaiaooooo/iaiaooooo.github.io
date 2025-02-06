@@ -1,15 +1,18 @@
-import React from "react";
-import Button from "../Button";
+import React from 'react';
 
-import yourData from "../../data/portfolio.json";
+import data from '../../data/portfolio.json';
+import IconSocial from '../IconSocial';
+import classNames from 'classnames';
 
-const Socials = ({ className }) => {
+const Socials = ({ className, iconClass }) => {
   return (
-    <div className={`${className} flex flex-wrap mob:flex-nowrap link`}>
-      {yourData.socials.map((social, index) => (
-        <Button key={index} onClick={() => window.open(social.link)}>
-          {social.title}
-        </Button>
+    <div className={classNames(className, 'gap-8 flex flex-wrap text-center')}>
+      {data.socials.map((social, index) => (
+        <IconSocial
+          key={index}
+          social={social.title}
+          className={classNames(iconClass, 'transition-all ease-in-out duration-300')}
+        />
       ))}
     </div>
   );

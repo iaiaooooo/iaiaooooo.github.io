@@ -1,7 +1,7 @@
 {
     "name": "Ilaria Bocca",
-    "headerTaglineOne": "Hello,",
-    "headerTaglineTwo": "I'm Ilaria :)",
+    "headerTaglineOne": "I'm Ilaria,",
+    "headerTaglineTwo": "Illustrator & Graphic Designer",
     "headerTaglineThree": "",
     "headerTaglineFour": "",
     "showCursor": false,
@@ -11,51 +11,36 @@
     "socials": [
         {
             "id": "1",
-            "title": "Github",
-            "link": "https://github.com/chetanverma16"
+            "title": "email",
+            "link": "mailto:ilaria@bocca.com",
+            "shape": "pillow"
         },
         {
             "id": "2",
-            "title": "LinkedIn",
-            "link": "https://www.linkedin.com/in/chetanverma7/"
+            "title": "linkedin",
+            "link": "https://www.linkedin.com",
+            "shape": "potato"
         },
         {
             "id": "3",
-            "title": "Twitter",
-            "link": "https://twitter.com/realchetanverma"
+            "title": "behance",
+            "link": "https://behance.net",
+            "shape": "kiss"
         },
         {
             "id": "4",
-            "title": "Blog",
-            "link": "https://blog.chetanverma.com/"
-        },
-        {
-            "id": "5",
-            "title": "Email",
-            "link": "mailto:hello@chetanverma.com"
+            "title": "instagram",
+            "link": "https://instagram.com",
+            "shape": "gear"
         }
     ],
     "projects": [
-        {
-            "id": "1",
-            "title": "Caffe Platti",
-            "description": "Rebranding",
-            "imageSrc": "/images/projects/caffeplatti.jpeg",
-            "url": ""
-        },
-        {
-            "id": "2",
-            "title": "Stickers",
-            "description": "Illustration",
-            "imageSrc": "/images/projects/stickers.jpg",
-            "url": ""
-        },
         {
             "id": "3",
             "title": "Texture",
             "description": "Collage",
             "imageSrc": "/images/projects/texture.png",
-            "url": ""
+            "url": "/projects/texture"
         },
         {
             "id": "4",
@@ -81,13 +66,29 @@
             "id": "7",
             "title": "Strawberry Lady",
             "description": "Illustration for article",
-            "imageSrc": "/images/projects/lasigonaradellefragole.jpg"
+            "imageSrc": "/images/projects/lasigonaradellefragole.jpg",
+            "url": "/projects/lady-of-strawberries"
         },
         {
             "id": "8",
             "title": "Chessboard",
             "description": "Illustration applied to project",
-            "imageSrc": "/images/projects/chess.jpg"
+            "imageSrc": "/images/projects/chessboard/chess.jpg",
+            "url": "/projects/chessboard"
+        },
+        {
+            "id": "1",
+            "title": "Caffe Platti",
+            "description": "Rebranding",
+            "imageSrc": "/images/projects/caffeplatti.jpeg",
+            "url": "http://www.caffeplatti.com"
+        },
+        {
+            "id": "2",
+            "title": "Stickers",
+            "description": "Illustration",
+            "imageSrc": "/images/projects/stickers.jpg",
+            "url": ""
         }
     ],
     "services": [
@@ -112,24 +113,24 @@
             "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
         }
     ],
-    "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "aboutpara": "I am an illustrator and graphic designer currently working at Arduino. I enjoy experimenting with geometric shapes as well as softer forms, making my illustrative style versatile and adaptable. In my free time, I like playing bridge, playing the cello, and swimming. I have a special love for the sea, which brings me peace and inspiration.",
     "resume": {
-        "tagline": "👋  I'm a software engineer, product designer.",
+        "tagline": "👋  I'm an illustrator and graphic designer .",
         "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
         "experiences": [
             {
                 "id": "1",
-                "dates": "March 2022 - Present",
+                "dates": "May 2023 - Present",
                 "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Bullet One, Bullet Two"
+                "position": "Designer at Arduino",
+                "bullets": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ut libero aliquet aliquam, Nullam nec purus ut libero aliqu"
             },
             {
-                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-                "dates": "July 2020 - March 2022",
-                "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+                "id": "2",
+                "dates": "November 2022 - May 2023",
+                "type": "Internship",
+                "position": "Junior Designer at Arduino",
+                "bullets": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ut libero aliquet aliquam. Nullam nec purus ut libero aliqu"
             }
         ],
         "education": {

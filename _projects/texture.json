@@ -1,0 +1,14 @@
+{
+    "title": "Texture",
+    "description": [
+        {
+            "text": "This project stems from an experiment with textures. Starting with a sheet cut into a simple shape like a triangle, I created three different illustrations, each with its own texture. Using the collage technique, I wanted to explore how each texture can transform and interact with the shape, creating a visual dialogue between the illustrations and adding depth and character to each of them.",
+            "images": [
+                "/images/projects/texture/texture0.3x.png",
+                "/images/projects/texture/texturecostume.png",
+                "/images/projects/texture/texturegelato.png",
+                "/images/projects/texture/texturepizza.png"
+            ]
+        }
+    ]
+}

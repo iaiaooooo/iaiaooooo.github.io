@@ -1,0 +1,23 @@
+{
+    "title": "Chessboard",
+    "description": [
+        {
+            "text": "In my third year of university, I developed a project inspired by libraries, envisioning a mysterious object to hide among the books, something that could blend in seamlessly while still catching the eye of passersby. After a research phase, I chose a chessboard as the central object: simple, intriguing, and embodying a sense of play and anticipation that could appeal to a diverse audience. The chessboard is designed to resemble a book: it closes like a bound volume, with a spine that mimics a classic cover, and the pieces inside are neatly arranged like books on a shelf. ",
+            "images": [
+                "/images/projects/chessboard/4.jpg",
+                "/images/projects/chessboard/7.jpg",
+                "/images/projects/chessboard/8.jpg",
+                "/images/projects/chessboard/3.jpg"
+            ]
+        },
+        {
+            "text":"I also conceptualized a window display strategy to heighten the sense of discovery. In the first display, the shadow of a chess piece is projected onto a white panel using a low, frontal light, creating visual compositions that tie back to the theme of libraries. In the second display, oversized chess pieces are arranged in a sequence, with some hidden behind others, continuing the theme of concealment. This project plays with the idea of hide-and-seek, the allure of the unknown, and the power of curiosity.",
+            "images": [
+                "/images/projects/chessboard/ILL3_ILL-SPAZIO_Bocca_Ilaria_1.jpg",
+                "/images/projects/chessboard/ILL3_ILL-SPAZIO_Bocca_Ilaria_2.jpg",
+                "/images/projects/chessboard/ILL3_ILL-SPAZIO_Bocca_Ilaria_3.jpg",
+                "/images/projects/chessboard/ILL3_ILL-SPAZIO_Bocca_Ilaria_4.jpg"
+            ]
+        }
+    ]
+}
