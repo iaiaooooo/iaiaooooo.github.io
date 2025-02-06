@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap')
 layer(base);
 @import 'tailwindcss';
-@import './markdown.css' layer(utilities);
 
 
 @font-face {
@@ -65,7 +64,7 @@ layer(base);
 }
 
 @utility content-container {
-  @apply mt-5 px-10 md:px-20 xl:px-50 2xl:px-80;
+  @apply mt-5 md:mt-20 px-10 md:px-20 xl:px-50 2xl:px-70;
 }
 
 body {
