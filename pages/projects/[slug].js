@@ -1,6 +1,5 @@
-import { React, useState, useEffect } from 'react';
+import { React } from 'react';
 import { getProjectBySlug, getAllProjects } from '../../utils/api';
-import useDeviceSize from '../../utils';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Head from 'next/head';
