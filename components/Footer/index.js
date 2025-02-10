@@ -11,10 +11,10 @@ const Footer = ({}) => {
         <div className="mt-5 md:mt-10 flex flex-col sm:flex-row justify-between content-end">
           <div>
             <h1 className="font-grotezk text-3xl md:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              LET&apos;S WORK
+              DON&apos;T BE SHY,
             </h1>
             <h1 className="font-grotezk text-3xl md:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              TOGETHER :)
+              SAY HI :)
             </h1>
           </div>
           <div className="h-fit mt-5 md:mt-auto mb-0 text-black dark:text-white justify-self-end text-end">
