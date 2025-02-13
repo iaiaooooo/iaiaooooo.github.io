@@ -11,6 +11,7 @@ const Socials = ({ className, iconClass }) => {
         <IconSocial
           key={index}
           social={social.title}
+          onClick={() => window.open(social.link, '_blank')}
           className={classNames(iconClass, 'transition-all ease-in-out duration-300')}
         />
       ))}

@@ -79,7 +79,7 @@ export default function Home() {
           Work
         </div>
 
-        <div className="content-container grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
+        <div className="content-container grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-3 gap-8">
           {data.projects.map((project) => (
             <WorkCard
               key={project.id}

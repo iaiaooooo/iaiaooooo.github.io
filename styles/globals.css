@@ -37,6 +37,8 @@ layer(base);
   --color-accent: #D8BC00;
   --color-accent-dark: #5A2575;
   --color-accent-bg-dark: #1b0e21;
+
+  --breakpoint-3xl: 120rem;
 }
 
 @utility global-background {
@@ -64,7 +66,7 @@ layer(base);
 }
 
 @utility content-container {
-  @apply mt-5 md:mt-20 px-10 md:px-20 xl:px-50 2xl:px-70;
+  @apply mt-5 md:mt-20 px-10 md:px-20 xl:px-50;
 }
 
 body {

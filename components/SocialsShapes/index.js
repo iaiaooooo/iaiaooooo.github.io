@@ -17,6 +17,7 @@ const SocialsShape = ({ className }) => {
         <div
           className="relative h-40 w-40 lg:w-60 lg:h-60 2xl:w-70 2xl:h-70 motion-safe:hover:-mt-10 transition-all ease-in-out duration-300"
           key={index}
+          onClick={() => window.open(social.link, '_blank')}
         >
           <IconShape key={index} fixed shape={social.shape} className="h-full w-full absolute inset-0 text-colored" />
           <IconSocial
