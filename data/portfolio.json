@@ -19,18 +19,18 @@
             "id": "2",
             "title": "linkedin",
             "link": "https://www.linkedin.com",
-            "shape": "potato"
+            "shape": "https://www.linkedin.com/in/ilaria-bocca-56a166187/?originalSubdomain=it"
         },
         {
             "id": "3",
             "title": "behance",
-            "link": "https://behance.net",
+            "link": "https://www.behance.net/ilariabocca1",
             "shape": "kiss"
         },
         {
             "id": "4",
             "title": "instagram",
-            "link": "https://instagram.com",
+            "link": "https://www.instagram.com/ilariabocca/",
             "shape": "gear"
         }
     ],
