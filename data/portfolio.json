@@ -89,6 +89,13 @@
             "description": "Illustration",
             "imageSrc": "/images/projects/stickers.jpg",
             "url": ""
+        },
+        {
+            "id": "9",
+            "title": "Teresa Batista",
+            "description": "Editorial Illustration",
+            "imageSrc": "/images/projects/teresabatista/teresavaso2_0.5x.png",
+            "url": "/projects/teresabatista"
         }
     ],
     "services": [
