@@ -58,8 +58,8 @@
         },
         {
             "id": "6",
-            "title": "Asparagus",
-            "description": "Pattern Wallpaper",
+            "title": "Menù",
+            "description": "Pattern",
             "imageSrc": "/images/projects/limonigialli.png",
             "url": "/projects/pattern"
         },
@@ -67,7 +67,7 @@
             "id": "7",
             "title": "Strawberry Lady",
             "description": "Illustration for article",
-            "imageSrc": "/images/projects/lesignoredellefragole1cover.jpeg",
+            "imageSrc": "/images/projects/lesignoredellefragole1cover.jpg",
             "url": "/projects/lady-of-strawberries"
         },
         {
